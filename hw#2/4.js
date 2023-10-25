@@ -24,7 +24,7 @@
 */
 
 const userNumber = +prompt('Введите число');
-const units = (userNumber / 10 - Math.trunc(userNumber / 10)).toFixed(1) * 10;
+const units = userNumber % 10;
 const decade = Math.floor(userNumber / 10) % 10;
 const hundred = Math.floor(userNumber / 100) % 10;
 console.log(`В числе ${userNumber} количество сотен: ${hundred}, десятков: ${decade}, единиц: ${units}`);

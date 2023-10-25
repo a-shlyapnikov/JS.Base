@@ -14,7 +14,7 @@
 число 32.
 */
 
-const dayNumber = +prompt('Введите число в интервале \[1, 32\):');
+const dayNumber = +prompt('Введите число в интервале [1, 32):');
 let decade;
 if (dayNumber < 11) {
     decade = 1
@@ -26,5 +26,5 @@ if (dayNumber < 11) {
 if (dayNumber < 1 || dayNumber > 31) {
     alert('Неверное значение');
 } else {
-    alert(`Число ${dayNumber} попадает в ${decade} декаду месяца.`)
+    alert(`Число ${dayNumber} попадает в ${decade} декаду месяца.`);
 }
