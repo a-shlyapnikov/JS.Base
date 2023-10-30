@@ -20,10 +20,15 @@ for (let i = 0; i < 5; i++) {
 }
 console.log(arr);
 console.log(Math.min(...arr));
-const indexOfThree = [];
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 3) {
-        indexOfThree.push(i);
+const indexOfThree = arr.reduce((acc, number, index) => {
+    if(number === 3){
+        acc.push(index);
     }
-}
+    return acc;
+}, []); 
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 3) {
+//         indexOfThree.push(i);
+//     }
+// }
 console.log(indexOfThree);
