@@ -16,15 +16,12 @@
 
 const arr = [];
 for (let i = 0; i < 5; i++) {
-    arr[i] = Math.floor(Math.random() * 9)
+    arr[i] = Math.floor(Math.random() * 10);
 }
 console.log(arr);
 console.log(Math.min(...arr));
 const indexOfThree = arr.reduce((acc, number, index) => {
-    if(number === 3){
-        acc.push(index);
-    }
-    return acc;
+    return number === 3 ? [...acc, index] : acc;
 }, []); 
 // for (let i = 0; i < arr.length; i++) {
 //     if (arr[i] === 3) {
