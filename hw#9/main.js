@@ -28,7 +28,7 @@ messageBtnEl.addEventListener('click', function (e) {
 // - Если поле было чем-либо заполнено, подсветку (класс error) необходимо убрать.
 
 const form = document.querySelector('form');
-const formElements = document.querySelectorAll('form + input, select');
+const formElements = document.querySelectorAll('form input, select');
 form.addEventListener('submit', function (e) {
     formElements.forEach(element => {
         if (!element.value) {
@@ -37,3 +37,11 @@ form.addEventListener('submit', function (e) {
         }
     })
 });
+form.addEventListener('input', event => {
+    if (!event.target.classList.contains('form-control')) {
+      return;
+    }
+    event.target.value === ''
+      ? event.target.classList.add('error')
+      : event.target.classList.remove('error');
+  });
