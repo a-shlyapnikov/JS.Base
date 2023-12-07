@@ -1,6 +1,7 @@
 const containerEl = document.querySelector('.container');
 
 const products = JSON.parse(dataInfo);
+console.log(products);
 
 products.forEach(function (product) {
     const productItem = document.createElement('div');
